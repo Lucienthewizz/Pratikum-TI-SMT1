@@ -1,0 +1,66 @@
+<mxfile host="Electron" modified="2023-10-17T10:35:52.315Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.8.2 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="ZiAeTtkjs8Vu7hpDPC-N" version="21.8.2" type="device">
+  <diagram name="Page-1" id="bOsw9nqrsD_bBNR3ue8Q">
+    <mxGraphModel dx="597" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;" parent="1" source="wiBSHBN3SHqBTRkv2X46-2" target="wiBSHBN3SHqBTRkv2X46-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-2" value="main" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontFamily=Helvetica;fillColor=#ffffff;fontColor=#333333;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="120" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fontFamily=Helvetica;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;" parent="1" source="wiBSHBN3SHqBTRkv2X46-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-6" value="int nilai = 90" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;fontFamily=Helvetica;labelPosition=center;align=center;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-14" value="Output &lt;br&gt;Horee! nilai S!" style="shape=parallelogram;html=1;strokeWidth=1;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="310" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wiBSHBN3SHqBTRkv2X46-16" value="end" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="120" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-3" value="Nilai &amp;lt;= 90" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="125" y="320" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;fontFamily=Helvetica;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;" parent="1" target="wiBSHBN3SHqBTRkv2X46-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="370" as="sourcePoint" />
+            <mxPoint x="360" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-18" value="True&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="260" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-19" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="125" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;fontFamily=Helvetica;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="wiBSHBN3SHqBTRkv2X46-14" target="wiBSHBN3SHqBTRkv2X46-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="480" as="sourcePoint" />
+            <mxPoint x="400" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fontFamily=Helvetica;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;" parent="1" source="-0l5DUAA4vOfdjbImzqf-3" target="-0l5DUAA4vOfdjbImzqf-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="179" y="419" as="sourcePoint" />
+            <mxPoint x="179" y="459" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-28" value="&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Output&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Booo! tidak nilai S!&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=1;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="89.38" y="490" width="181.25" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-0l5DUAA4vOfdjbImzqf-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;fontFamily=Helvetica;fillColor=#f5f5f5;strokeColor=#000000;shadow=0;entryPerimeter=0;" parent="1" source="-0l5DUAA4vOfdjbImzqf-28" target="wiBSHBN3SHqBTRkv2X46-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="545" as="sourcePoint" />
+            <mxPoint x="179.5" y="585" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

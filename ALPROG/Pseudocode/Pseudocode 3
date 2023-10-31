@@ -1,0 +1,201 @@
+PROGRAM Menentukan_Volume_dan_Luas_Permukaan_Bangun_Ruang
+DESCRIPTION
+    Program untuk menghitung volume dan luas permukaan berbagai bangun ruang
+FUNCTION main()
+BEGIN
+    DECLARE bangunRuang, pilihan: integer
+    DECLARE r, t, luasAlas, sisiMiring, sisiTegak: float
+
+    REPEAT
+        OUTPUT "---------------------------------"
+        OUTPUT "Program Menentukan Volume dan Luas Permukaan dari bangun ruang"
+        OUTPUT "---------------------------------"
+        OUTPUT "Pilih Bangun Ruang (1-5):"
+        OUTPUT "1. Tabung"
+        OUTPUT "2. Bola"
+        OUTPUT "3. Limas Segi Empat"
+        OUTPUT "4. Prisma Segitiga"
+        OUTPUT "5. Kerucut"
+        OUTPUT "0. Exit"
+        OUTPUT "Pilihan mu:"
+        
+        INPUT bangunRuang
+        
+        SWITCH bangunRuang
+            CASE 1:
+                vl_lp_Tabung()
+            CASE 2:
+                vl_lP_Bola()
+            CASE 3:
+                vl_lp_Limas_segiempat()
+            CASE 4:
+                vl_lp_Prisma_segitiga()
+            CASE 5:
+                vl_lp_Kerucut()
+            DEFAULT:
+                OUTPUT "Inputan salah, tolong input ulang!"
+        END SWITCH
+
+        OUTPUT "Apakah Ingin Lanjut (1 untuk iya, 0 untuk tidak):"
+        INPUT pilihan
+    UNTIL pilihan = 0
+END
+
+FUNCTION vl_lp_Tabung()
+BEGIN
+    DECLARE r, t: float
+
+    OUTPUT "Masukkan jari-jari tabung:"
+    INPUT r
+    OUTPUT "Masukkan tinggi tabung:"
+    INPUT t
+
+    DECLARE volume, luasPermukaan: float
+    volume = vlTabung(r, t)
+    luasPermukaan = lpTabung(r, t)
+
+    OUTPUT "Volume tabung:", volume
+    OUTPUT "Luas permukaan tabung:", luasPermukaan
+END
+
+FUNCTION vl_lP_Bola()
+BEGIN
+    DECLARE r: float
+
+    OUTPUT "Masukkan jari-jari Bola:"
+    INPUT r
+
+    DECLARE volume, luasPermukaan: float
+    volume = vlBola(r)
+    luasPermukaan = lpBola(r)
+
+    OUTPUT "Volume Bola:", volume
+    OUTPUT "Luas permukaan Bola:", luasPermukaan
+END
+
+FUNCTION vl_lp_Limas_segiempat()
+BEGIN
+    DECLARE luasAlas, t, sisiMiring: float
+
+    OUTPUT "Masukkan Luas Alas Limas Segi Empat:"
+    INPUT luasAlas
+    OUTPUT "Masukkan tinggi Limas Segi Empat:"
+    INPUT t
+    OUTPUT "Masukkan sising miring Limas Segi Empat:"
+    INPUT sisiMiring
+
+    DECLARE volume, luasPermukaan: float
+    volume = vlLimas_segiempat(luasAlas, t)
+    luasPermukaan = lpLimas_segiempat(luasAlas, sisiMiring)
+
+    OUTPUT "Volume Limas Segi Empat:", volume
+    OUTPUT "Luas permukaan Limas Segi Empat:", luasPermukaan
+END
+
+FUNCTION vl_lp_Prisma_segitiga()
+BEGIN
+    DECLARE luasAlas, t, sisiTegak: float
+
+    OUTPUT "Masukkan Luas Alas Prisma Segitiga:"
+    INPUT luasAlas
+    OUTPUT "Masukkan tinggi Prisma Segitiga:"
+    INPUT t
+    OUTPUT "Masukkan Sisi Tegak Prisma Segitiga:"
+    INPUT sisiTegak
+
+    DECLARE volume, luasPermukaan: float
+    volume = vlPrisma_segitiga(luasAlas, t)
+    luasPermukaan = lpPrisma_segitiga(luasAlas, sisiTegak)
+
+    OUTPUT "Volume Prisma Segitiga:", volume
+    OUTPUT "Luas permukaan Prisma Segitiga:", luasPermukaan
+END
+
+FUNCTION vl_lp_Kerucut()
+BEGIN
+    DECLARE r, t, sisiMiring: float
+
+    OUTPUT "Masukkan jari-jari Kerucut:"
+    INPUT r
+    OUTPUT "Masukkan tinggi Kerucut:"
+    INPUT t
+    OUTPUT "Masukkan Sisi Miring Kerucut:"
+    INPUT sisiMiring
+
+    DECLARE volume, luasPermukaan: float
+    volume = vlKerucut(r, t)
+    luasPermukaan = lpKerucut(r, sisiMiring)
+
+    OUTPUT "Volume Kerucut:", volume
+    OUTPUT "Luas permukaan Kerucut:", luasPermukaan
+END
+
+FUNCTION vlTabung(r: float, t: float) : float
+BEGIN
+    DECLARE volume: float
+    volume = 3.14 * r * r * t
+    RETURN volume
+END
+
+FUNCTION lpTabung(r: float, t: float) : float
+BEGIN
+    DECLARE luasPermukaan: float
+    luasPermukaan = 2 * 3.14 * r * (r + t)
+    RETURN luasPermukaan
+END
+
+FUNCTION vlBola(r: float) : float
+BEGIN
+    DECLARE volume: float
+    volume = 1.33 * 3.14 * r * r * r
+    RETURN volume
+END
+
+FUNCTION lpBola(r: float) : float
+BEGIN
+    DECLARE luasPermukaan: float
+    luasPermukaan = 4 * 3.14 * r * r
+    RETURN luasPermukaan
+END
+
+FUNCTION vlLimas_segiempat(luasAlas: float, t: float) : float
+BEGIN
+    DECLARE volume: float
+    volume = 0.3 * luasAlas * t
+    RETURN volume
+END
+
+FUNCTION lpLimas_segiempat(luasAlas: float, sisiMiring: float) : float
+BEGIN
+    DECLARE luasPermukaan: float
+    luasPermukaan = luasAlas + 4 * (0.5 * sisiMiring)
+    RETURN luasPermukaan
+END
+
+FUNCTION vlPrisma_segitiga(luasAlas: float, t: float) : float
+BEGIN
+    DECLARE volume: float
+    volume = luasAlas * t
+    RETURN volume
+END
+
+FUNCTION lpPrisma_segitiga(luasAlas: float, sisiTegak: float) : float
+BEGIN
+    DECLARE luasPermukaan: float
+    luasPermukaan = 2 * luasAlas + 3 * sisiTegak
+    RETURN luasPermukaan
+END
+
+FUNCTION vlKerucut(r: float, t: float) : float
+BEGIN
+    DECLARE volume: float
+    volume = 0.3 * 3.14 * r * r * t
+    RETURN volume
+END
+
+FUNCTION lpKerucut(r: float, sisiMiring: float) : float
+BEGIN
+    DECLARE luasPermukaan: float
+    luasPermukaan = 3.14 * r * (r + sisiMiring)
+    RETURN luasPermukaan
+END
